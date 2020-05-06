@@ -2,15 +2,6 @@ import XCTest
 @testable import Composed
 
 final class ComposedTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-    }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
     
     func test_can_create_a_composed_object_from_two_structs() {
         _ = MoneyMakingMonkey(
@@ -72,6 +63,16 @@ final class ComposedTests: XCTestCase {
         let data = try! JSONEncoder().encode(monkey)
         let string = String(data: data, encoding: .utf8)
         XCTAssertNotNil(string)
+    }
+    
+    func test_can_compose_from_2_up_to_10_objects() {
+        typealias Two = Compose2<Monkey, MoneyMaker>
+        typealias Three = Compose3<Monkey, MoneyMaker, Boozehound>
+        typealias Four = Compose4<Monkey, MoneyMaker, Boozehound, String>
+        typealias Five = Compose5<Monkey, MoneyMaker, Boozehound, String, Bool>
+        typealias Six = Compose6<Monkey, MoneyMaker, Boozehound, String, Bool, Int>
+        typealias Seven = Compose7<Monkey, MoneyMaker, Boozehound, String, Bool, Int, Double>
+        typealias Eight = Compose8<Monkey, MoneyMaker, Boozehound, String, Bool, Int, Double, Int16>
     }
 }
 
