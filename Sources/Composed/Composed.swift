@@ -41,3 +41,6 @@ struct Compose3<A,B,C> {
         return c[keyPath: keyPath]
     }
 }
+
+extension Compose2: Codable where A: Codable, B: Codable {}
+extension Compose3: Codable where A: Codable, B: Codable, C: Codable {}

@@ -58,6 +58,28 @@ final class ComposedTests: XCTestCase {
         XCTAssertTrue(monkey.poisonOfChoice == "Bourbon")
         XCTAssertTrue(monkey.favoriteMovie == "Jaws")
     }
+    
+    func test_can_encode_composed_object_to_json_string() {
+        let monkey = MoneyMakingMonkey(
+            Monkey(name: "Chico", hasTail: true),
+            MoneyMaker(salary: 100000)
+        )
+        let data = try! JSONEncoder().encode(monkey)
+        let string = String(data: data, encoding: .utf8)
+        XCTAssertNotNil(string)
+    }
+    
+    func test_can_encode_compose3_object_to_json_string() {
+        let monkey = MoneyMakingBoozeMonkey(
+            Monkey(name: "Chico", hasTail: true),
+            MoneyMaker(salary: 100000),
+            Boozehound(poisonOfChoice: "Bourbon")
+        )
+        
+        let data = try! JSONEncoder().encode(monkey)
+        let string = String(data: data, encoding: .utf8)
+        XCTAssertNotNil(string)
+    }
 }
 
 //MARK: Helpers
@@ -65,16 +87,16 @@ final class ComposedTests: XCTestCase {
 fileprivate typealias MoneyMakingMonkey = Compose2<Monkey, MoneyMaker>
 fileprivate typealias MoneyMakingBoozeMonkey = Compose3<Monkey, MoneyMaker, Boozehound>
 
-fileprivate struct Monkey {
+fileprivate struct Monkey: Codable {
     let name: String
     let hasTail: Bool
 }
 
-fileprivate struct MoneyMaker {
+fileprivate struct MoneyMaker: Codable {
     let salary: Int
 }
 
-fileprivate struct Boozehound {
+fileprivate struct Boozehound: Codable {
     let poisonOfChoice: String
 }
 
