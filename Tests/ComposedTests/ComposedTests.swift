@@ -53,6 +53,21 @@ final class ComposedTests: XCTestCase {
         XCTAssertNotNil(string)
     }
     
+    func test_can_decode_composed_object_from_json_string() {
+        typealias MoneyMakingMonkey = Compose2<Monkey, MoneyMaker>
+        
+        let json = """
+        {
+            "name": "Joe",
+            "hasTail": true,
+            "salary": 0
+        }
+        """.data(using: .utf8)
+
+        let monkey = try? JSONDecoder().decode(MoneyMakingMonkey.self, from: json!)
+        XCTAssertNotNil(monkey)
+    }
+    
     func test_can_encode_compose3_object_to_json_string() {
         let monkey = MoneyMakingBoozeMonkey(
             Monkey(name: "Chico", hasTail: true),
