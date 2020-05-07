@@ -80,7 +80,7 @@ final class ComposedTests: XCTestCase {
         XCTAssertNotNil(string)
     }
     
-    func test_can_compose_from_2_up_to_10_objects() {
+    func test_can_compose_from_2_up_to_8_objects() {
         typealias Two = Compose2<Monkey, MoneyMaker>
         typealias Three = Compose3<Monkey, MoneyMaker, Boozehound>
         typealias Four = Compose4<Monkey, MoneyMaker, Boozehound, String>
