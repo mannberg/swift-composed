@@ -1,55 +1,55 @@
 @dynamicMemberLookup
-struct Compose2<A,B> {
+public struct Compose2<A,B> {
     private let a: A
     private let b: B
     
-    init(_ a: A, _ b: B) {
+    public init(_ a: A, _ b: B) {
         self.a = a
         self.b = b
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
 }
 
 @dynamicMemberLookup
-struct Compose3<A,B,C> {
+public struct Compose3<A,B,C> {
     private let a: A
     private let b: B
     private let c: C
     
-    init(_ a: A, _ b: B, _ c: C) {
+    public init(_ a: A, _ b: B, _ c: C) {
         self.a = a
         self.b = b
         self.c = c
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
 }
 
 @dynamicMemberLookup
-struct Compose4<A,B,C,D> {
+public struct Compose4<A,B,C,D> {
     private let a: A
     private let b: B
     private let c: C
     private let d: D
     
-    init(
+    public init(
         _ a: A,
         _ b: B,
         _ c: C,
@@ -61,32 +61,32 @@ struct Compose4<A,B,C,D> {
         self.d = d
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
         return d[keyPath: keyPath]
     }
 }
 
 @dynamicMemberLookup
-struct Compose5<A,B,C,D,E> {
+public struct Compose5<A,B,C,D,E> {
     private let a: A
     private let b: B
     private let c: C
     private let d: D
     private let e: E
     
-    init(
+    public init(
         _ a: A,
         _ b: B,
         _ c: C,
@@ -100,29 +100,29 @@ struct Compose5<A,B,C,D,E> {
         self.e = e
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
         return d[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
         return e[keyPath: keyPath]
     }
 }
 
 @dynamicMemberLookup
-struct Compose6<A,B,C,D,E,F> {
+public struct Compose6<A,B,C,D,E,F> {
     private let a: A
     private let b: B
     private let c: C
@@ -130,7 +130,7 @@ struct Compose6<A,B,C,D,E,F> {
     private let e: E
     private let f: F
     
-    init(
+    public init(
         _ a: A,
         _ b: B,
         _ c: C,
@@ -146,34 +146,34 @@ struct Compose6<A,B,C,D,E,F> {
         self.f = f
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
         return d[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
         return e[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
         return f[keyPath: keyPath]
     }
 }
 
 
 @dynamicMemberLookup
-struct Compose7<A,B,C,D,E,F,G> {
+public struct Compose7<A,B,C,D,E,F,G> {
     private let a: A
     private let b: B
     private let c: C
@@ -182,7 +182,7 @@ struct Compose7<A,B,C,D,E,F,G> {
     private let f: F
     private let g: G
     
-    init(
+    public init(
         _ a: A,
         _ b: B,
         _ c: C,
@@ -200,37 +200,37 @@ struct Compose7<A,B,C,D,E,F,G> {
         self.g = g
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
         return d[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
         return e[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
         return f[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<G, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<G, X>) -> X {
         return g[keyPath: keyPath]
     }
 }
 
 @dynamicMemberLookup
-struct Compose8<A,B,C,D,E,F,G,H> {
+public struct Compose8<A,B,C,D,E,F,G,H> {
     private let a: A
     private let b: B
     private let c: C
@@ -240,7 +240,7 @@ struct Compose8<A,B,C,D,E,F,G,H> {
     private let g: G
     private let h: H
     
-    init(
+    public init(
         _ a: A,
         _ b: B,
         _ c: C,
@@ -260,35 +260,35 @@ struct Compose8<A,B,C,D,E,F,G,H> {
         self.h = h
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<A, X>) -> X {
         return a[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<B, X>) -> X {
         return b[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<C, X>) -> X {
         return c[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<D, X>) -> X {
         return d[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<E, X>) -> X {
         return e[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<F, X>) -> X {
         return f[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<G, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<G, X>) -> X {
         return g[keyPath: keyPath]
     }
     
-    subscript<X>(dynamicMember keyPath: KeyPath<H, X>) -> X {
+    public subscript<X>(dynamicMember keyPath: KeyPath<H, X>) -> X {
         return h[keyPath: keyPath]
     }
 }

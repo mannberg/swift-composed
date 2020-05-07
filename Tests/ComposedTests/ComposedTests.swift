@@ -1,5 +1,5 @@
 import XCTest
-@testable import Composed
+import Composed
 
 final class ComposedTests: XCTestCase {
     
