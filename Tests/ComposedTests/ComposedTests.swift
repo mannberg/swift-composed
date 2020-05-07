@@ -82,6 +82,11 @@ final class ComposedTests: XCTestCase {
         monkey.name = name
         XCTAssertTrue(monkey.name == name)
     }
+    
+    func test_can_access_immutable_values_on_wrapped_types() {
+        let c = Compose2<String, Int>("Hey", 1)
+        XCTAssertFalse(c.isEmpty)
+    }
 }
 
 //MARK: Helpers
