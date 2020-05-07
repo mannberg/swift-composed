@@ -74,6 +74,14 @@ final class ComposedTests: XCTestCase {
         typealias Seven = Compose7<Monkey, MoneyMaker, Boozehound, String, Bool, Int, Double>
         typealias Eight = Compose8<Monkey, MoneyMaker, Boozehound, String, Bool, Int, Double, Int16>
     }
+    
+    func test_can_update_property_on_composed_object() {
+        var monkey = MoneyMakingBoozeMonkey.standard
+        let name = "Pepe"
+        XCTAssertFalse(monkey.name == name)
+        monkey.name = name
+        XCTAssertTrue(monkey.name == name)
+    }
 }
 
 //MARK: Helpers
@@ -90,18 +98,18 @@ fileprivate extension MoneyMakingBoozeMonkey {
 }
 
 fileprivate struct Monkey: Codable {
-    let name: String
-    let hasTail: Bool
+    var name: String
+    var hasTail: Bool
 }
 
 fileprivate struct MoneyMaker: Codable {
-    let salary: Int
+    var salary: Int
 }
 
 fileprivate struct Boozehound: Codable {
-    let poisonOfChoice: String
+    var poisonOfChoice: String
 }
 
 fileprivate struct FilmBuff {
-    let favoriteMovie: String
+    var favoriteMovie: String
 }
