@@ -46,13 +46,6 @@ final class ComposedTests: XCTestCase {
         XCTAssertTrue(monkey.favoriteMovie == "Jaws")
     }
     
-    func test_can_encode_composed_object_to_json_string() {
-        let monkey: MoneyMakingBoozeMonkey = .standard
-        let data = try! JSONEncoder().encode(monkey)
-        let string = String(data: data, encoding: .utf8)
-        XCTAssertNotNil(string)
-    }
-    
     func test_can_decode_composed_object_from_json_string() {
         typealias MoneyMakingMonkey = Compose2<Monkey, MoneyMaker>
         
@@ -66,18 +59,6 @@ final class ComposedTests: XCTestCase {
 
         let monkey = try? JSONDecoder().decode(MoneyMakingMonkey.self, from: json!)
         XCTAssertNotNil(monkey)
-    }
-    
-    func test_can_encode_compose3_object_to_json_string() {
-        let monkey = MoneyMakingBoozeMonkey(
-            Monkey(name: "Chico", hasTail: true),
-            MoneyMaker(salary: 100000),
-            Boozehound(poisonOfChoice: "Bourbon")
-        )
-        
-        let data = try! JSONEncoder().encode(monkey)
-        let string = String(data: data, encoding: .utf8)
-        XCTAssertNotNil(string)
     }
     
     func test_can_compose_from_2_up_to_8_objects() {

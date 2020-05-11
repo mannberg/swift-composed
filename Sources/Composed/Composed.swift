@@ -468,11 +468,11 @@ public struct Compose8<A,B,C,D,E,F,G,H> {
     }
 }
 
-//MARK: Codable
-extension Compose2: Codable where A: Codable, B: Codable {}
-extension Compose3: Codable where A: Codable, B: Codable, C: Codable {}
-extension Compose4: Codable where A: Codable, B: Codable, C: Codable, D: Codable {}
-extension Compose5: Codable where A: Codable, B: Codable, C: Codable, D: Codable, E: Codable {}
-extension Compose6: Codable where A: Codable, B: Codable, C: Codable, D: Codable, E: Codable, F: Codable {}
-extension Compose7: Codable where A: Codable, B: Codable, C: Codable, D: Codable, E: Codable, F: Codable, G: Codable {}
-extension Compose8: Codable where A: Codable, B: Codable, C: Codable, D: Codable, E: Codable, F: Codable, G: Codable, H: Codable {}
+//MARK: Decodable
+extension Compose2: Decodable where A: Decodable, B: Decodable {}
+extension Compose3: Decodable where A: Decodable, B: Decodable, C: Decodable {}
+extension Compose4: Decodable where A: Decodable, B: Decodable, C: Decodable, D: Decodable {}
+extension Compose5: Decodable where A: Decodable, B: Decodable, C: Decodable, D: Decodable, E: Decodable {}
+extension Compose6: Decodable where A: Decodable, B: Decodable, C: Decodable, D: Decodable, E: Decodable, F: Decodable {}
+extension Compose7: Decodable where A: Decodable, B: Decodable, C: Decodable, D: Decodable, E: Decodable, F: Decodable, G: Decodable {}
+extension Compose8: Decodable where A: Decodable, B: Decodable, C: Decodable, D: Decodable, E: Decodable, F: Decodable, G: Decodable, H: Decodable {}
